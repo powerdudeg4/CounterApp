@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CounterApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CounterApp" Height="450" Width="300" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="115*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Add"  HorizontalAlignment="Left" Height="75" Margin="30,287,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.559,0.398" Grid.ColumnSpan="2" Click="Button_Click_1"/>
+        <Button Content="Subtract" Name="IFuckingHateApple" HorizontalAlignment="Right" Height="75" Margin="0,287,30,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="Button_Click_2" />
+        <TextBlock x:Name="Number" FontSize="150" HorizontalAlignment="Center" Margin="2,60,4,148" RenderTransformOrigin="0.455,0.643" Width="288" Text="0" TextAlignment="Center" Grid.ColumnSpan="2">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.182"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.36"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button Content="Quit" Grid.Column="1" HorizontalAlignment="Right" Height="24" Margin="0,375,113,0" VerticalAlignment="Top" Width="67" Click="Button_Click"/>
+        <Button Content="Info" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="174,10,0,0" VerticalAlignment="Top" Width="46" Click="Button_Click_3"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="i have 3 usb ports and i can upgrade my ThinkPad, can your mac do the same? XD" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="54" Width="208" Margin="10,10,0,0"/>
+
     </Grid>
 </Window>
